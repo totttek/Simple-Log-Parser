@@ -7,7 +7,7 @@ You run the command with the path to your log file.
 ```bash
 dotnet run -- <path_to_log_file>
 ```
-After that the script generates two .txt files with error and warning entries.
+After that the script generates two .txt files with error and warning entries, in the same directory as the original log file.
 ## Highlights
 - Case insensitive matching for "[Error]" and "Error:" log formats
 - Preserves original line numbers for easy cross referencing
