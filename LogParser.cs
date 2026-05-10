@@ -40,12 +40,12 @@ class LogParser
 		File.WriteAllLines(Path.Combine(directory,"errors.txt"), logErrors);
 		File.WriteAllLines(Path.Combine(directory,"warnings.txt"), logWarnings);
 
-		Console.WriteLine($"{GREEN}Logs Parsed succesfully!\nTotal lines: {totalLines} {RESET}");
-		Console.WriteLine($"{RED}Errors Found: {logErrors.Count()} {RESET}");
-		Console.WriteLine($"{YELLOW}Warnings Found: {logWarnings.Count()} {RESET}");
+		Console.WriteLine($"{GREEN}Logs Parsed successfully!\nTotal lines: {totalLines} {RESET}");
+		Console.WriteLine($"{RED}Errors Found: {logErrors.Count} {RESET}");
+		Console.WriteLine($"{YELLOW}Warnings Found: {logWarnings.Count} {RESET}");
 
-		if (logErrors.Count() > 0) return 2; // Errors detected
-		if (logWarnings.Count() > 0) return 3; // Warnings deteced
+		if (logErrors.Count > 0) return 2; // Errors detected (may also include warnings)
+		if (logWarnings.Count > 0) return 3; // Warnings deteced
 
 		return (0);
 	}
